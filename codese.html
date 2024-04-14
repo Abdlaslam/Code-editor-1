@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style /codese.css">
+  <title>IQRAA STUDIO</title>
+  <link rel="icon" href="/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="/img/s1.png" alt="لوغو الموقع">
+    <span>IQRAA STUDIO</span>
+  </header>
+  <div class="edc">
+<div>
+  <font size=4>{HTML-CODES}</font> <br><br>
+  <textarea id="html"></textarea>
+</div><br>
+<div>
+  <font size=4>{CSS-CODES}</font> <br><br>
+  <textarea id="css"></textarea>
+</div><br>
+<div>
+  <font size=4>{JS-CODES}</font> <br><br>
+  <textarea id="js"></textarea>
+</div>
+  </div>
+  <div class="edc1">
+  <iframe id="output" </iframe>
+  </div>
+       <div>
+         <marquee>
+           <h6>
+             <img width="100" style="display: inline-block" src="/img/s1.png" alt="لوجو">
+           </h6>
+         </marquee>
+         <marquee>
+           <h6>
+             <h4 style="color: #fff">IQRAA STUDIO</h4>
+           </h6>
+         </marquee>
+       </div>
+       
+       
+       
+       <script type="text/javascript">
+  function run() {
+    let htmlCode = document.querySelector(".edc #html").value;
+    let cssCode = "<style>" + document.querySelector(".edc #css").value + "</style>";
+    let jsCode = document.querySelector(".edc #js").value;
+    let output = document.querySelector(".edc1 #output");
+    output.contentDocument.body.innerHTML = htmlCode + cssCode;
+    output.contentWindow.eval(jsCode);
+  }
+
+  document.querySelector(".edc #html").addEventListener("keyup", run);
+  document.querySelector(".edc #css").addEventListener("keyup", run);
+  document.querySelector(".edc #js").addEventListener("keyup", run);
+</script>
+</body>
+
+</html>
